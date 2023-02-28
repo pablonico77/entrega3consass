@@ -1,0 +1,131 @@
+ /* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+/* siempre declaramos este reset */
+}
+
+/* estilos del contenedor */
+.contenedor{
+    height: 800px;
+    display: grid;
+    /* tenemos que declarar sus filas y columnas */
+    grid-template-columns: 2fr 1fr ;
+    grid-template-rows: repeat(2, 1fr) ;  
+    gap: 40px ;
+    margin: 20px;
+}
+
+
+
+/* estilos de los hijos */
+
+.hijo-uno{
+    background-color: aqua;
+}
+
+.hijo-dos{
+    background-color:blueviolet;
+}
+
+.hijo-tres{
+    background-color: brown;
+}
+
+.hijo-cuatro{
+    background-color: beige;
+}
+
+/* estilos de ejemplo */
+
+
+
+/* estilos del padre */
+.ejemplo{
+    background-color: brown;
+    height: 500px;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows: repeat(2, 1fr) ;
+    justify-items: center;
+    align-items: center;
+}
+
+
+/* estilos de los hijos */
+
+.imagen-uno{
+    background-color: aquamarine;
+    justify-self: right;
+    align-self: start;
+}
+
+/* ejemplo de caja */
+
+.caja{
+    background-color: blue;
+}
+
+.hijo-caja{
+    width: 150px;
+    height: 150px;
+    background-color: tomato;
+    margin: 5px;
+    padding: 200px;
+}
+
+/* estilos ejemplo-dos */
+
+/* estilos de container */
+
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr ;
+    grid-template-rows: 0.5fr 3fr 1fr 0.5fr ;
+
+/* grid template areas */
+    grid-template-areas:
+        "header header header"
+        "main main aside"
+        "section-uno section-dos aside"
+        "footer footer footer";
+        gap: 10px;
+}
+/* estilos de los items */
+header{
+    background-color: tomato;
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style: none;
+}
+
+main{
+    background-color: brown;
+    grid-area: main;
+}
+
+.section-uno{
+    background-color: blue;
+    grid-area: section-uno;
+}
+
+.section-dos{
+    background-color: cadetblue;
+    grid-area: section-dos;
+}
+
+aside{
+    background-color: blueviolet;
+    grid-area: aside;
+}
+
+footer{
+    background-color: rgb(177, 77, 139);
+    grid-area: footer;
+}
